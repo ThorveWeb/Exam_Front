@@ -1,0 +1,17 @@
+.display-1{
+    line-height: 25rem;
+    font-size: 6rem;
+    font-weight: bolder;
+    stroke-width: 10px;
+    background: transparent;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+
+}
+
+@keyframes left {
+    100%{
+        transform: translateX(-80%);
+    }
+    
+}

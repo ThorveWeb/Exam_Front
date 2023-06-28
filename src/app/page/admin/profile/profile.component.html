@@ -1,0 +1,53 @@
+<mat-card *ngIf="user">
+    <h1>Your Profile Details</h1>
+    <mat-card-content>
+        <div class="container">
+            <div class="row">
+                <div class="container text-center">
+                    <img src="../../../assets/img_avatar1.png" class="img-fluid profile-img" alt="">
+                    <h1></h1>
+                    <div class="mat-headline display-2 font-weight-bold">{{ user.firstName }}{{ user.lastName }}</div>
+                    <mat-card>
+                        <table class="table">
+                            <tr>
+                                <th>Username</th>
+                                <td>
+                                    {{ user.username }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>UserID</th>
+                                <td>CSE{{ user.id }}</td>
+                            </tr>
+
+
+
+                            <!--*ngIf="user.phone"  null value  data not display-->
+
+                            <tr >
+                                <th>Phone</th>
+                                <td>
+                                    {{ user.phone }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Role</th>
+                                <td>
+                                    {{ user.authorities[0].authority }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>
+                                    {{ user.enabled ? "Active" : "Non Active" }}
+                                </td>
+                            </tr>
+                        </table>
+
+                        <button mat-raised-button color="primary" class="btn">UPDATE</button>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

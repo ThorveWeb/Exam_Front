@@ -1,0 +1,27 @@
+<mat-card class="sidebar">
+    <mat-list>
+        <mat-action-list>
+
+            <div mat-subheader>Menu</div>
+
+
+            
+            <mat-list-item class="list" routerLinkActive="active" routerLink="/user/welcome">
+                <mat-icon matListIcon>home</mat-icon> HOME
+            </mat-list-item>
+
+
+            <mat-list-item class="list" routerLinkActive="active" routerLink="/user/all">
+              
+                <mat-icon matListIcon class="mx-3">school</mat-icon> All Quizzes
+            </mat-list-item>
+
+
+            <mat-list-item class="list" *ngFor="let cat of categories" [routerLink]="'/user/' + cat.cid"
+                routerLinkActive="active">
+
+                <mat-icon matListIcon class="mx-3">school</mat-icon>{{ cat.title }}</mat-list-item>
+
+        </mat-action-list>
+    </mat-list>
+</mat-card>

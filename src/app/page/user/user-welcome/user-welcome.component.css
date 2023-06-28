@@ -1,0 +1,9 @@
+.display-1{
+    line-height: 31rem;
+    font-size: 6rem;
+    font-weight: bolder;
+    stroke-width: 10px;
+    background: transparent;
+    text-shadow: 0px 0px 9px #850000;
+    color: white;
+}

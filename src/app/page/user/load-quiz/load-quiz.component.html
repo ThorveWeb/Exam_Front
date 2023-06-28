@@ -1,0 +1,51 @@
+<div class="container mt-2">
+  <h1 class="mat-headline text-center">Available Quizzes</h1>
+  <div class="row">
+
+    <!--for loops-->
+    <div class="col-lg-4 col-sm-6 mb-3 " *ngFor="let quiz of quizzes">
+      <mat-card class="click p-4">
+       <div class="text-center">
+        <img src="../../../../assets/admin.jpg" alt="" class="img" />
+      
+       </div>
+       
+        <div class="text-center">
+
+
+          <mat-card-title>
+            {{ quiz.title }}
+          </mat-card-title>
+          <mat-card-subtitle> {{ quiz.category.title }}</mat-card-subtitle>
+        </div>
+
+        <mat-card-content>
+          <p class="truncate">{{ quiz.description }}</p>
+
+          <div class="info">
+            <div>{{ quiz.numberOfQuestions }} Questions</div>
+            <div>Marks {{ quiz.maxMarks }}</div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="btn" mat-button color="primary" [routerLink]="'/user/instructions/' + quiz.qid">
+            View
+          </button>
+
+
+
+          <button class="btn" mat-button color="accent" [routerLink]="'/user/instructions/' + quiz.qid">
+            Start
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-12" *ngIf="quizzes.length == 0">
+      <mat-card>
+        <mat-card-content>
+          <h1>No data in this Category</h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

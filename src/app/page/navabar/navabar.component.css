@@ -1,0 +1,27 @@
+.display-2{
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 3px deeppink;
+
+    color: white;
+}
+
+.display-2:hover{
+    color:wheat;
+}
+.img{
+    width: 7rem;
+    height: 5rem;
+    border-radius: 20%;
+    box-shadow: 0px 0px 10px 3px deeppink;
+}
+.bg{
+   
+    box-shadow: 0px 0px 30px 1px deeppink,
+   inset   1px 1px 4px 5px deeppink,  inset   -1px 0px 4px 5px rgb(39, 31, 35);
+
+}
+
+.nav-link{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <mat-card class="p-5">
+            <h1 class="display-2 font-weight-bold text-center text-danger font-italic mb-5">Login Here !!!</h1>
+
+            <form class="full-width" (ngSubmit)="formSubmit()">
+              <mat-form-field class="full-width container" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input
+                  [(ngModel)]="loginData.username"
+                  name="username"
+                  required
+                  matInput
+                  placeholder="Enter Your Username"
+                />
+                <mat-hint>User name must be unique</mat-hint>
+              </mat-form-field>
+  
+              <mat-form-field class="full-width container" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input
+                  [(ngModel)]="loginData.password"
+                  name="password"
+                  required
+                  type="password"
+                  matInput
+                  placeholder="Enter Your Password"
+                />
+              </mat-form-field>
+  
+              <div class="text-center">
+                <button mat-raised-button color="primary" class="loginbtn mb-3">
+                  Login
+                </button>
+              </div>
+              <p>Don't have an account ?<a routerLink="/signup" class="signupbtn"> Signup here</a></p>
+            </form>
+        </mat-card>
+        </div>
+    
+
+    </div>
+
+</div>

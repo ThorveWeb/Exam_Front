@@ -1,0 +1,23 @@
+.example-header-image {
+    background-image: url("./../../../../../assets/admin.jpg");
+    background-size: cover;
+    width: 5rem;
+    height: 5rem;
+  }
+  .red {
+    color: rgb(255, 0, 0);
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  button {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  .description {
+    margin-left: 50px;
+  }
+  
